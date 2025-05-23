@@ -166,13 +166,13 @@
       </section>
       <section id="imagens" class="mt-5">
         <div class="text-center">
-          <h2>Imagem</h2>
+          <h2>Imagens</h2>
           <!-- <p>Coloque aqui prints do aplicativo.</p> -->
-          <!-- <p>Aqui estão alguns prints do nosso aplicativo.</p> -->
-          <p>Aqui esta um print do nosso aplicativo.</p>
+          <p>Aqui estão alguns prints do nosso aplicativo.</p>
+          <!-- <p>Aqui esta um print do nosso aplicativo.</p> -->
           <br>
           <img src="Print1.png" class="img-fluid mb-2" alt="Print 1">
-          <!-- <img src="Print1.png" class="img-fluid" alt="Print 2"> -->
+          <img src="Print2.png" class="img-fluid" alt="Print 2" width="320px">
         </div>
       </section>
       
@@ -183,7 +183,7 @@
           i.putExtra("nome", nomeDigitado);
           startActivity(i);</code></pre> -->
           <pre><code>&nbsp;&nbsp;&nbsp;
-            //2) Iniciando os elementos
+            <!-- //2) Iniciando os elementos
         btnAntes = (Button) findViewById(R.id.btnEsquerda);
         btnDepois = (Button) findViewById(R.id.btnDireita);
         fotinhas = (ImageView) findViewById(R.id.img);
@@ -196,7 +196,174 @@
             {
                 fotinhas.setImageResource(R.drawable.rambo);
             }
+        }); -->
+        package com.example.Semana_informatica;
+
+import androidx.appcompat.app.AppCompatActivity;
+
+import android.os.Bundle;
+import android.view.View;
+import android.widget.ArrayAdapter;
+import android.widget.Button;
+import android.widget.ListView;
+import android.widget.Spinner;
+
+import java.util.ArrayList;
+
+public class MainActivity extends AppCompatActivity {
+
+    Spinner selecionar;
+    ListView listinha;
+    Button btnMostrar;
+
+    ArrayList<Filme> ListaTerror = new ArrayList<>();
+    ArrayList<Filme> ListaDrama = new ArrayList<>();
+    ArrayList<Filme> ListaComedia = new ArrayList<>();
+    ArrayList<Filme> ListaRomance = new ArrayList<>();
+    ArrayList<Filme> ListaFiccao = new ArrayList<>();
+    ArrayList<Filme> ListaAcao = new ArrayList<>();
+    ArrayList<Filme> ListaAnimacao = new ArrayList<>();
+
+    FilmeAdapter adapter;
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
+
+        selecionar = findViewById(R.id.selecionar);
+        listinha = findViewById(R.id.listinha);
+        btnMostrar = findViewById(R.id.btnMostrar);
+
+        String[] generos = {"Terror", "Drama", "Comédia", "Romance", "Ficção Científica", "Ação", "Animação"};
+        ArrayAdapter<String> spinnerAdapter = new ArrayAdapter<>(this, android.R.layout.simple_spinner_item, generos);
+        spinnerAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        selecionar.setAdapter(spinnerAdapter);
+
+        // Filmes de exemplo
+        ListaTerror.add(new Filme(" \n Corra!(2017) \n", "Chris (Daniel Kaluuya) é jovem negro que está prestes a conhecer " +
+                " a família de sua namorada branca Rose (Allison Williams)." +
+                " A princípio, ele acredita que o comportamento excessivamente amoroso " +
+                " por parte da família dela é uma tentativa de lidar com o relacionamento de Rose " +
+                " com um rapaz negro, mas, com o tempo, Chris percebe que a família esconde algo muito mais perturbador " +
+                " - e o jeito é tentar escapar." +
+                "\n"));
+        ListaTerror.add(new Filme(" \n Psicose(1960) \n","Em Psicose, Marion Crane (Janet Leigh) é uma secretária que rouba " +
+                " 40 mil dólares da imobiliária onde trabalha para se casar e começar uma nova vida. Durante a fuga a carro, " +
+                " ela enfrenta uma forte tempestade, erra o caminho e chega em um velho hotel. O estabelecimento é administrado " +
+                " por um sujeito atencioso chamado Norman Bates (Anthony Perkins), que nutre um forte respeito e temor por sua mãe." +
+                " Marion decide passar a noite no local, sem saber o perigo que a cerca. \n"));
+        ListaTerror.add(new Filme(" \n O Silêncio dos inocentes(1991) \n","A agente do FBI, Clarice Starling (Jodie Foster) é ordenada " +
+                " a encontrar um assassino que arranca a pele de suas vítimas. Para entender como ele pensa, ela procura o perigoso psicopata, " +
+                "Hannibal Lecter (Anthony Hopkins), encarcerado sob a acusação de canibalismo." +
+                "\n"));
+
+
+        ListaDrama.add(new Filme("\n" +
+                "Um Sonho de Liberdade(1995) \n", "Em 1946, Andy Dufresne (Tim Robbins), um jovem e bem sucedido banqueiro, tem a sua vida radicalmente modificada ao ser condenado por um crime que nunca cometeu, o homicídio de sua esposa e do amante dela. Ele é mandado para uma prisão que é o pesadelo de qualquer detento, a Penitenciária Estadual de Shawshank, no Maine. Lá ele irá cumprir a pena perpétua. Andy logo será apresentado a Warden Norton (Bob Gunton), o corrupto e cruel agente penitenciário, que usa a Bíblia como arma de controle e ao Capitão Byron Hadley (Clancy Brown) que trata os internos como animais. Andy faz amizade com Ellis Boyd Redding (Morgan Freeman), um prisioneiro que cumpre pena há 20 anos e controla o mercado negro da instituição." +
+                "\n"));
+        ListaDrama.add(new Filme("\n" +
+                "Forrest Gump: O Contador de Histórias(1994) \n", "Quarenta anos da história dos Estados Unidos, vistos pelos olhos de Forrest Gump (Tom Hanks), um rapaz com QI abaixo da média e boas intenções. Por obra do acaso, ele consegue participar de momentos cruciais, como a Guerra do Vietnã e Watergate, mas continua pensando no seu amor de infância, Jenny Curran." +
+                "\n"));
+        ListaDrama.add(new Filme("\n" +
+                "Central do Brasil(1998) \n", "Em Central do Brasil, Dora (Fernanda Montenegro) trabalha escrevendo cartas para analfabetos na estação Central do Brasil, no centro da cidade do Rio de Janeiro. Ainda que a escrivã não envie todas as cartas que escreve - as cartas que considera inúteis ou fantasiosas demais -, ela decide ajudar um menino (Vinícius de Oliveira), após sua mãe ser atropelada, a tentar encontrar o pai que nunca conheceu, no interior do Nordeste." +
+                "\n"));
+
+
+        ListaComedia.add(new Filme("\n" +
+                "As Branquelas(2004) \n", "Em As Branquelas, os irmãos Marcus (Marlon Wayans) e Kevin Copeland (Shawn Wayans) são detetives do FBI que estão com problemas no trabalho. A última investigação da dupla foi um grande fracasso e eles estão sob a ameaça de serem demitidos. Quando um plano para sequestrar as mimadas irmãs Brittany (Maitland Ward) e Tiffany Wilson (Anne Dudek) é descoberto, o caso é entregue aos principais rivais dos irmãos Copeland, os agentes Vincent Gomez (Eddie Velez) e Jack Harper (Lochlyn Munro). Para aumentar ainda mais a humilhação da dupla, eles são escalados para escoltar as jovens mimadas do aeroporto até o local de um evento pelo qual elas esperaram por meses. Porém no trajeto um acidente de carro provoca um verdadeiro desastre: enquanto uma das irmãs arranha o nariz, a outra corta o lábio. Desesperadas, elas se recusam a ir ao evento. É quando,para salvar o emprego, Marcus e Kevin decidem por assumir as identidades das irmãs." +
+                "\n"));
+        ListaComedia.add(new Filme("\n" +
+                "Auto da Compadecida(2000) \n", "Depois de anos desaparecido, João Grilo retorna à Taperoá para se juntar ao velho companheiro Chicó. Após sua história de ressurreição ter se espalhado, ele é disputado como cabo eleitoral pelos dois políticos mais poderosos da cidade." +
+                "\n"));
+        ListaComedia.add(new Filme("\n" +
+                "Minha Mãe É uma Peça(2013) \n", "Dona Hermínia (Paulo Gustavo) é uma mulher de meia idade, divorciada do marido (Herson Capri), que a trocou por uma mais jovem (Ingrid Guimarães). Hiperativa, ela não larga o pé de seus filhos Marcelina (Mariana Xavier) e Juliano (Rodrigo Pandolfo), sem se dar conta que eles já estão bem grandinhos. Um dia, após descobrir que eles consideram ela uma chata, resolve sair de casa sem avisar para ninguém, deixando todos, de alguma forma, preocupados com o que teria acontecido. Mal sabem eles que a mãe foi visitar a querida tia Zélia (Sueli Franco) para desabafar com ela suas tristezas do presente e recordar os bons tempos do passado." +
+                "\n"));
+
+
+        ListaRomance.add(new Filme("\n" +
+                "Você Nem Imagina(2020) \n", "Em Você Nem Imagina, Ellie Chu (Leah Lewis) é a típica aluna deslocada que possui o hábito de fazer a lição de casa de seus colegas por dinheiro para contribuir com as contas em casa. Secretamente, ela possui uma paixão pela bela Aster Flores (Alexxis Lemire). Quando Paul, um jogador de futebol, se aproxima de Ellie para pedir ajuda para escrever uma carta de amor para sua amada, ela entra em conflito. " +
+                "\n"));
+        ListaRomance.add(new Filme("\n" +
+                "Diário de Uma Paixão(2004) \n", "Numa clínica geriátrica, Duke, um dos internos que relativamente está bem, lê para uma interna (com um quadro mais grave) a história de Allie Hamilton (Rachel McAdams) e Noah Calhoun (Ryan Gosling), dois jovens enamorados que em 1940 se conheceram num parque de diversões. Eles foram separados pelos pais dela, que nunca aprovaram o namoro, pois Noah era um trabalhador braçal e oriundo de uma família sem recursos financeiros. Para evitar qualquer aproximação, os pais de Alie a mandam para longe. Por um ano Noah escreveu para Allie todos os dias mas não obteve resposta, pois a mãe (Joan Allen) dela interceptava as cartas de Noah para a filha. Crendo que Allie não estava mais interessada nele, Noah escreveu uma carta de despedida e tentou se conformar. Alie esperava notícias de Noah, mas após 7 anos desistiu de esperar ao conhecer um charmoso oficial, Lon Hammond Jr. (James Marsden), que serviu na 2ª Grande Guerra (assim como Noah) e pertencia a uma família muito rica. Ele pede a mão de Allie, que aceita, mas o destino a faria se reencontrar com Noah. Como seu amor por ele ainda existia e era recíproco, ela precisa escolher entre o noivo e seu primeiro amor." +
+                "\n"));
+        ListaRomance.add(new Filme("\n" +
+                "Orgulho e Preconceito(2005) \n", "Inglaterra, 1797. As cinco irmãs Bennet - Elizabeth (Keira Knightley), Jane (Rosamund Pike), Lydia (Jena Malone), Mary (Talulah Riley) e Kitty (Carey Mulligan) - foram criadas por uma mãe (Brenda Blethyn) que tinha fixação em lhes encontrar maridos que garantissem seu futuro. Porém Elizabeth deseja ter uma vida mais ampla do que apenas se dedicar ao marido, sendo apoiada pelo pai (Donald Sutherland). Quando o sr. Bingley (Simon Woods), um solteiro rico, passa a morar em uma mansão vizinha, as irmãs logo ficam agitadas. Jane logo parece que conquistará o coração do novo vizinho, enquanto que Elizabeth conhece o bonito e esnobe sr. Darcy (Matthew Macfadyen). Os encontros entre Elizabeth e Darcy passam a ser cada vez mais constantes, apesar deles sempre discutirem." +
+                "\n"));
+
+
+        ListaFiccao.add(new Filme("\n" +
+                "Godzilla: Minus One(2023) \n", "Godzilla: Minus One, filme do diretor e roteirista Takashi Yamazaki, se passa em um Japão social e economicamente devastado após o término da Segunda Guerra Mundial, na qual o país saiu perdendo. A situação chega a um nível ainda mais crítico quando uma gigantesca e misteriosa criatura surge do mar para assolar o país, o temível kaiju. Sob esse pano de fundo, sentindo-se como se tivesse enganado a morte muitas vezes, está Kōichi Shikishima (Ryunosuke Kamiki), um piloto Kamikaze. E quando seu grupo é atacado na Ilha Odo, com muitos engenheiros de aviões de guerra mortos pelo monstro gigantesco, uma enorme culpa pesa sobre Shikishima, agora sobrevivente. Entrando assim, em uma missão pessoal, para defender suas pessoas queridas e vingar a morte de seus companheiros, Shikishima se une a um grande grupo de veteranos de Guerra, para finalmente derrotar o monstro conhecido como Godzilla." +
+                "\n"));
+        ListaFiccao.add(new Filme("\n" +
+                "Jurassic World: Reino Ameaçado(2018) \n", "Em Jurassic World: Reino Ameaçado, três anos após o fechamento do Jurassic Park, um vulcão prestes a entrar em erupção põe em risco a vida na ilha Nublar. No local não há mais qualquer presença humana, com os dinossauros vivendo livremente. Diante da situação, é preciso tomar uma decisão: deve-se retornar à ilha para salvar os animais ou abandoná-los para uma nova extinção? Decidida a resgatá-los, Claire (Bryce Dallas Howard) convoca Owen (Chris Pratt) a retornar à ilha com ela." +
+                "\n"));
+        ListaFiccao.add(new Filme("\n" +
+                "Círculo de Fogo(2013) \n", "Quando várias criaturas monstruosas, conhecidas como Kaiju, começam a emergir do mar, tem início uma batalha entre estes seres e os humanos. Para combatê-los, a humanidade desenvolve uma série de robôs gigantescos, os Jaegers, cada um controlado por duas pessoas através de uma conexão neural. Entretanto, mesmo os Jaegers se mostram insuficientes para derrotar os Kaiju. Diante deste cenário, a última esperança é um velho robô, obsoleto, que passa a ser comandado por um antigo piloto (Charlie Hunnam) e uma treinadora (Rinko Kikuchi)." +
+                "\n"));
+
+        ListaAcao.add(new Filme("\n" +
+                "Vingadores: Era de Ultron(2015) \n", "Tentanto proteger o planeta de ameaças como as vistas no primeiro Os Vingadores, Tony Stark busca construir um sistema de inteligência artificial que cuidaria da paz mundial. O projeto acaba dando errado e gera o nascimento do Ultron (voz de James Spader). Capitão América (Chris Evans), Homem de Ferro (Robert Downey Jr.), Thor (Chris Hemsworth), Hulk (Mark Ruffalo), Viúva Negra (Scarlett Johansson) e Gavião Arqueiro (Jeremy Renner) terão que se unir para mais uma vez salvar o dia." +
+                "\n"));
+        ListaFiccao.add(new Filme("\n" +
+                "Kingsman - Serviço Secreto(2015) \n", "Eggsy (Taron Egerton) é um jovem com problemas de disciplina que parece perto de se tornar um criminoso. Determinado dia, ele entra em contato com Harry (Colin Firth), que lhe apresenta à agência de espionagem Kingsman. O jovem se une a um time de recrutas em busca de uma vaga na agência. Ao mesmo tempo, Harry tenta impedir a ascensão do vilão Valentine (Samuel L. Jackson). Adaptação da série de quadrinhos criada por Mark Millar e Dave Gibbons." +
+                "\n"));
+        ListaFiccao.add(new Filme("\n" +
+                "Velozes & Furiosos 8(2017) \n", "Dom (Vin Diesel) e Letty (Michelle Rodriguez) estão curtindo a lua de mel em Havana, mas a súbita aparição de Cipher (Charlize Theron) atrapalha os planos do casal. Ela logo arma um plano para chantagear Dom, de forma que ele traia seus amigos e passe a ajudá-la a obter ogivas nucleares. Tal situação faz com Letty reúna os velhos amigos, que agora precisam enfrentar Cipher e, consequentemente, Dom." +
+                "\n"));
+
+
+        ListaAnimacao.add(new Filme("\n" +
+                "Nimona(2023) \n", "Nimona, uma adolescente com o poder de metamorfose, é alvo de assassinato de um cavaleiro. A missão do cavaleiro para matar Nimona se complica quando ele é acusado de um crime e descobre que Nimona pode conseguir exonerá-lo." +
+                "\n"));
+        ListaAnimacao.add(new Filme("\n" +
+                "Carros 3(2017) \n", "\n" +
+                "Veterano das pistas, o campeoníssimo Relâmpago McQueen se vê em apuros após o surgimento de um novato bastante veloz, Jackson Storm, que utiliza de alta tecnologia nos treinamentos. Obrigado a chegar ao limite para batê-lo, McQueen acaba sofrendo um sério acidente durante uma corrida, que o obriga a abandonar o campeonato daquele ano. Prestes a iniciar a próxima temporada, ele se vê em dúvidas sobre se consegue ser rápido o suficiente para bater Storm e, por causa disto, busca ajuda com seu novo patrocinador." +
+                "\n"));
+        ListaAnimacao.add(new Filme("\n" +
+                "A Era do Gelo 3(2009) \n", "Manny (Ray Romano/Diogo Vilela) e Ellie (Queen Latifah/Cláudia Gimenez) estão à espera de seu primeiro filho. Sid (John Leguizamo/Tadeu Melo) encontra alguns ovos de dinossauro, o que faz com que passe a ter sua própria família adotiva. Só que o roubo faz com que se meta em apuros, com a mãe tiranossauro vindo atrás de seus rebentos. Ela leva os três filhotes e ainda Sid para um mundo subterrâneo, onde os dinossauros ainda existem, o que obriga Manny, Ellie e Diego (Denis Leary/Márcio Garcia) a irem em sua busca para resgatá-lo." +
+                "\n"));
+
+
+        btnMostrar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                String genero = selecionar.getSelectedItem().toString();
+                ArrayList<Filme> listaSelecionada;
+
+                switch (genero) {
+                    case "Terror":
+                        listaSelecionada = ListaTerror;
+                        break;
+                    case "Drama":
+                        listaSelecionada = ListaDrama;
+                        break;
+                    case "Comédia":
+                        listaSelecionada = ListaComedia;
+                        break;
+                    case "Romance":
+                        listaSelecionada = ListaRomance;
+                        break;
+                    case "Ficção Científica":
+                        listaSelecionada = ListaFiccao;
+                        break;
+                    case "Ação":
+                        listaSelecionada = ListaAcao;
+                        break;
+                    case "Animação":
+                        listaSelecionada = ListaAnimacao;
+                        break;
+                    default:
+                        listaSelecionada = new ArrayList<>();
+                }
+
+                adapter = new FilmeAdapter(MainActivity.this, listaSelecionada);
+                listinha.setAdapter(adapter);
+            }
         });
+    }
+}
+
           </code></pre>
         </section>
         <section id="curiosidades" class="mt-5">
