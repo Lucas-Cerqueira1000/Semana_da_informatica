@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projeto Android - Grupo 3 - Catálogo de Filmes</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</head>
+<style>
+  /* ul
+  {
+    display: flex;
+    align-items: center; 
+    flex-direction: column;
+  } */
+   body
+   {
+    font-family: cursive;
+    font-size: 18px;
+    /* background-color: blueviolet; */
+    background: #d1d1d1;
+    /* background: radial-gradient(circle,rgba(209, 209, 209, 1) 0%, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 1) 0%, rgba(0, 0, 0, 1) 100%); */
+    background: url(Fundo.jpeg);
+    background-size: cover;
+    margin: 0;
+    position: relative;
+    height: 100vh;
+    /* width: 100vw;  */
+    user-select: none;
+   }
+   #txt
+   {
+    text-align: justify;
+   }
+   nav
+   {
+    text-shadow: rgb(255, 255, 255) 1px 1px 20px;
+    color: rgb(255, 255, 255);
+    height: 90px;
+    font-size: 24px;
+    box-shadow: black 0px 20px 30px ;
+   }
+   footer
+   {
+    text-shadow: white 1px 1px 20px;
+   }
+   img
+   {
+    box-shadow: black 1px 1px 30px;
+   }
+   h2
+   {
+    text-shadow: black 0px 0px 35px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-weight: bold;
+   }
+   #txt
+   {
+    font-family:cursive
+   }
+   h2
+   {
+    font-family:'Times New Roman', Times, serif;
+    text-shadow: white 0px 0px 20px;
+    font-weight: bold;
+   }
+   pre, code
+   {
+    font-family:cursive;
+   }
+   #curiosidades
+   {
+    font-family: cursive;
+    text-align: justify;
+   }
+   #integrantes
+   {
+     font-family: cursive;
+   }
+   main
+   {
+    background-color: #212529;
+    border-radius: 20px;
+    box-shadow: black 10px 50px 200px;
+    color: white;
+    padding: 40px;
+   }
+   .navbar-brand
+   {
+    font-size: 25px;
+    font-family: cursive;
+    font-weight: bold;
+   }
+   #link
+   {
+    font-family: cursive;
+    font-size: 25px;
+    color: white;
+    font-weight: bold;
+   }
+   #rodape
+   {
+    box-shadow: black 0px 0px 20px;
+    font-size: 20px;
+   }
+   body::-webkit-scrollbar 
+   {
+    width: 12px; /* width of the entire scrollbar */
+   }
+
+   body::-webkit-scrollbar-track 
+   {
+   background: #212529; /* color of the tracking area */
+   } 
+   body::-webkit-scrollbar-thumb 
+   {
+   background-color: #212529;    /* color of the scroll thumb */
+   border-radius: 20px;       /* roundness of the scroll thumb */
+   border: 3px solid rgb(125, 125, 125);  /* creates padding around scroll thumb */
+   }
+   pre::-webkit-scrollbar 
+   {
+    width: 12px; /* width of the entire scrollbar */
+   }
+   pre::-webkit-scrollbar-track 
+   {
+   background: #212529; /* color of the tracking area */
+   } 
+   pre::-webkit-scrollbar-thumb 
+   {
+   background-color: #212529; /* color of the scroll thumb */
+   border-radius: 20px;       /* roundness of the scroll thumb */
+   border: 3px solid rgb(134, 134, 134);  /* creates padding around scroll thumb */
+   }
+</style>
+<body>
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">Projeto Android</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" 
+            data-bs-target="#navbarNav" aria-controls="navbarNav" 
+            aria-expande d="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a class="nav-link" id="link" href="#sobre">Sobre</a></li>
+        <li class="nav-item"><a class="nav-link" id="link" href="#imagens">Imagens</a></li>
+        <li class="nav-item"><a class="nav-link" id="link" href="#codigo">Código</a></li>
+        <li class="nav-item"><a class="nav-link" id="link" href="#curiosidades">Curiosidades</a></li>
+        <li class="nav-item"><a class="nav-link" id="link" href="#integrantes">Integrantes</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+<div class="container my-5">
+  <main>
+  <section id="sobre" class="text-center">
+    <h2>Sobre o App</h2>
+
+      <p id="txt">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Este aplicativo foi desenvolvido como parte da Semana da Informática. 
+        Ele utiliza componentes como SeekBar, Spinner, Intent e mais.
+        Esse aplicativo tem a funcionalidade de que ao selecionar um gênero cinematográfico 
+        aparece alguns filmes desse gênero, e ao clicar nesse filme irá aparecer a sinopse do filme.</p>
+      </section>
+      <section id="imagens" class="mt-5">
+        <div class="text-center">
+          <h2>Imagem</h2>
+          <!-- <p>Coloque aqui prints do aplicativo.</p> -->
+          <!-- <p>Aqui estão alguns prints do nosso aplicativo.</p> -->
+          <p>Aqui esta um print do nosso aplicativo.</p>
+          <br>
+          <img src="Print1.png" class="img-fluid mb-2" alt="Print 1">
+          <!-- <img src="Print1.png" class="img-fluid" alt="Print 2"> -->
+        </div>
+      </section>
+      
+      <section id="codigo" class="mt-5">
+        <h2 class="text-center">Trechos de Código</h2>
+        <!-- <pre><code>&nbsp;&nbsp;&nbsp;// Exemplo de uso do Intent
+          Intent i = new Intent(MainActivity.this, SegundaTela.class);
+          i.putExtra("nome", nomeDigitado);
+          startActivity(i);</code></pre> -->
+          <pre><code>&nbsp;&nbsp;&nbsp;
+            //2) Iniciando os elementos
+        btnAntes = (Button) findViewById(R.id.btnEsquerda);
+        btnDepois = (Button) findViewById(R.id.btnDireita);
+        fotinhas = (ImageView) findViewById(R.id.img);
+        
+        //4) Evento Botao 2
+        btnDepois.setOnClickListener(new View.OnClickListener() 
+        {
+            @Override
+            public void onClick(View v) 
+            {
+                fotinhas.setImageResource(R.drawable.rambo);
+            }
+        });
+          </code></pre>
+        </section>
+        <section id="curiosidades" class="mt-5">
+          <h2 class="text-center">Curiosidades</h2>
+          <br>
+          <!-- <p class="text-center">O Android é baseado no kernel Linux e foi inicialmente criado pela Android Inc. em 2003!</p> -->
+          <ul>
+            <li>As concorrentes da época em que o Sistema Operacional da Google ainda estava engatinhando não deram nenhum crédito para a ameaça que o robozinho verde representava;</li>
+              <li>Os nomes das versões do Android são inspirados em doces, seguindo a ordem alfabética;</li>
+              <li>O criador do sistema Andy Rubin havia concebido o Android para ser uma plataforma para equipar câmeras digitais;</li>
+            <li>O Android é baseado no kernel Linux e foi inicialmente criado pela Android Inc. em 2003.</li>
+              </ul>
+            </section>
+            <section id="integrantes" class="mt-5">
+              <h2 class="text-center">Integrantes</h2>
+              <ul id="componentes">
+                <li>Antonio - Programador Android;</li>
+                <li>Branca - Auxiliar de Layout;</li>
+                <li>lucas - Responsável pelo site;</li>
+                <li>Paulo - Programador Android.</li>
+              </ul>
+            </section>
+          </div>
+        </main>
+  <footer class="bg-dark text-white text-center py-3" id="rodape">
+  Desenvolvido para a Semana da Informática - 2025 <br>
+  Professor Orientador - Rafael Russi Zamboni
+  <!-- Professor Orientador - Rafael Russi Zamboni(vulgo zamba) -->
+  </footer>
+
+</body>
+</html>
