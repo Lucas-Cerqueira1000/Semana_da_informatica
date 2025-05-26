@@ -136,11 +136,12 @@
 </style>
 <body>
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-  <div class="container-fluid">
-    <a class="navbar-brand" href="#">Projeto Android</a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" 
-            data-bs-target="#navbarNav" aria-controls="navbarNav" 
-            aria-expande d="false" aria-label="Toggle navigation">
+        <div class="container-fluid">
+                <a class="navbar-brand" href="#">Projeto Android</a>
+                <!-- <img src="android.png" class="text-center" width="40px" height="40px" id="android"> -->
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" 
+                data-bs-target="#navbarNav" aria-controls="navbarNav" 
+                aria-expande d="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarNav">
@@ -177,7 +178,7 @@
       </section>
       
       <section id="codigo" class="mt-5">
-        <h2 class="text-center">Trechos de Código</h2>
+        <h2 class="text-center">Código Fonte</h2>
         <!-- <pre><code>&nbsp;&nbsp;&nbsp;// Exemplo de uso do Intent
           Intent i = new Intent(MainActivity.this, SegundaTela.class);
           i.putExtra("nome", nomeDigitado);
@@ -260,7 +261,8 @@ public class MainActivity extends AppCompatActivity {
 
 
         ListaDrama.add(new Filme("\n" +
-                "Um Sonho de Liberdade(1995) \n", "Em 1946, Andy Dufresne (Tim Robbins), um jovem e bem sucedido banqueiro, tem a sua vida radicalmente modificada ao ser condenado por um crime que nunca cometeu, o homicídio de sua esposa e do amante dela. Ele é mandado para uma prisão que é o pesadelo de qualquer detento, a Penitenciária Estadual de Shawshank, no Maine. Lá ele irá cumprir a pena perpétua. Andy logo será apresentado a Warden Norton (Bob Gunton), o corrupto e cruel agente penitenciário, que usa a Bíblia como arma de controle e ao Capitão Byron Hadley (Clancy Brown) que trata os internos como animais. Andy faz amizade com Ellis Boyd Redding (Morgan Freeman), um prisioneiro que cumpre pena há 20 anos e controla o mercado negro da instituição." +
+                "Um Sonho de Liberdade(1995) \n", "Em 1946, Andy Dufresne (Tim Robbins), um jovem e bem sucedido banqueiro, tem a sua vida radicalmente modificada ao ser condenado por um crime que nunca cometeu, o homicídio de sua esposa e do amante dela. Ele é mandado para uma prisão que é o pesadelo de qualquer detento, a Penitenciária Estadual de Shawshank, no Maine. Lá ele irá cumprir a pena perpétua. Andy logo será apresentado a Warden Norton (Bob Gunton), o corrupto e cruel agente penitenciário, que usa a Bíblia como arma de controle e ao Capitão Byron Hadley (Clancy Brown) 
+                que trata os internos como animais. Andy faz amizade com Ellis Boyd Redding (Morgan Freeman), um prisioneiro que cumpre pena há 20 anos e controla o mercado negro da instituição." +
                 "\n"));
         ListaDrama.add(new Filme("\n" +
                 "Forrest Gump: O Contador de Histórias(1994) \n", "Quarenta anos da história dos Estados Unidos, vistos pelos olhos de Forrest Gump (Tom Hanks), um rapaz com QI abaixo da média e boas intenções. Por obra do acaso, ele consegue participar de momentos cruciais, como a Guerra do Vietnã e Watergate, mas continua pensando no seu amor de infância, Jenny Curran." +
@@ -271,13 +273,15 @@ public class MainActivity extends AppCompatActivity {
 
 
         ListaComedia.add(new Filme("\n" +
-                "As Branquelas(2004) \n", "Em As Branquelas, os irmãos Marcus (Marlon Wayans) e Kevin Copeland (Shawn Wayans) são detetives do FBI que estão com problemas no trabalho. A última investigação da dupla foi um grande fracasso e eles estão sob a ameaça de serem demitidos. Quando um plano para sequestrar as mimadas irmãs Brittany (Maitland Ward) e Tiffany Wilson (Anne Dudek) é descoberto, o caso é entregue aos principais rivais dos irmãos Copeland, os agentes Vincent Gomez (Eddie Velez) e Jack Harper (Lochlyn Munro). Para aumentar ainda mais a humilhação da dupla, eles são escalados para escoltar as jovens mimadas do aeroporto até o local de um evento pelo qual elas esperaram por meses. Porém no trajeto um acidente de carro provoca um verdadeiro desastre: enquanto uma das irmãs arranha o nariz, a outra corta o lábio. Desesperadas, elas se recusam a ir ao evento. É quando,para salvar o emprego, Marcus e Kevin decidem por assumir as identidades das irmãs." +
+                "As Branquelas(2004) \n", "Em As Branquelas, os irmãos Marcus (Marlon Wayans) e Kevin Copeland (Shawn Wayans) são detetives do FBI que estão com problemas no trabalho. A última investigação da dupla foi um grande fracasso e eles estão sob a ameaça de serem demitidos. Quando um plano para sequestrar as mimadas irmãs Brittany (Maitland Ward) e Tiffany Wilson (Anne Dudek) é descoberto, o caso é entregue aos principais rivais dos irmãos Copeland, os agentes Vincent Gomez (Eddie Velez) e Jack Harper (Lochlyn Munro). Para aumentar ainda mais a humilhação da dupla,
+                 eles são escalados para escoltar as jovens mimadas do aeroporto até o local de um evento pelo qual elas esperaram por meses. Porém no trajeto um acidente de carro provoca um verdadeiro desastre: enquanto uma das irmãs arranha o nariz, a outra corta o lábio. Desesperadas, elas se recusam a ir ao evento. É quando,para salvar o emprego, Marcus e Kevin decidem por assumir as identidades das irmãs." +
                 "\n"));
         ListaComedia.add(new Filme("\n" +
                 "Auto da Compadecida(2000) \n", "Depois de anos desaparecido, João Grilo retorna à Taperoá para se juntar ao velho companheiro Chicó. Após sua história de ressurreição ter se espalhado, ele é disputado como cabo eleitoral pelos dois políticos mais poderosos da cidade." +
                 "\n"));
         ListaComedia.add(new Filme("\n" +
-                "Minha Mãe É uma Peça(2013) \n", "Dona Hermínia (Paulo Gustavo) é uma mulher de meia idade, divorciada do marido (Herson Capri), que a trocou por uma mais jovem (Ingrid Guimarães). Hiperativa, ela não larga o pé de seus filhos Marcelina (Mariana Xavier) e Juliano (Rodrigo Pandolfo), sem se dar conta que eles já estão bem grandinhos. Um dia, após descobrir que eles consideram ela uma chata, resolve sair de casa sem avisar para ninguém, deixando todos, de alguma forma, preocupados com o que teria acontecido. Mal sabem eles que a mãe foi visitar a querida tia Zélia (Sueli Franco) para desabafar com ela suas tristezas do presente e recordar os bons tempos do passado." +
+                "Minha Mãe É uma Peça(2013) \n", "Dona Hermínia (Paulo Gustavo) é uma mulher de meia idade, divorciada do marido (Herson Capri), que a trocou por uma mais jovem (Ingrid Guimarães). Hiperativa, ela não larga o pé de seus filhos Marcelina (Mariana Xavier) e Juliano (Rodrigo Pandolfo), sem se dar conta que eles já estão bem grandinhos. Um dia, após descobrir que eles consideram ela uma chata, resolve sair de casa sem avisar para ninguém, deixando todos, 
+                de alguma forma, preocupados com o que teria acontecido. Mal sabem eles que a mãe foi visitar a querida tia Zélia (Sueli Franco) para desabafar com ela suas tristezas do presente e recordar os bons tempos do passado." +
                 "\n"));
 
 
@@ -285,15 +289,20 @@ public class MainActivity extends AppCompatActivity {
                 "Você Nem Imagina(2020) \n", "Em Você Nem Imagina, Ellie Chu (Leah Lewis) é a típica aluna deslocada que possui o hábito de fazer a lição de casa de seus colegas por dinheiro para contribuir com as contas em casa. Secretamente, ela possui uma paixão pela bela Aster Flores (Alexxis Lemire). Quando Paul, um jogador de futebol, se aproxima de Ellie para pedir ajuda para escrever uma carta de amor para sua amada, ela entra em conflito. " +
                 "\n"));
         ListaRomance.add(new Filme("\n" +
-                "Diário de Uma Paixão(2004) \n", "Numa clínica geriátrica, Duke, um dos internos que relativamente está bem, lê para uma interna (com um quadro mais grave) a história de Allie Hamilton (Rachel McAdams) e Noah Calhoun (Ryan Gosling), dois jovens enamorados que em 1940 se conheceram num parque de diversões. Eles foram separados pelos pais dela, que nunca aprovaram o namoro, pois Noah era um trabalhador braçal e oriundo de uma família sem recursos financeiros. Para evitar qualquer aproximação, os pais de Alie a mandam para longe. Por um ano Noah escreveu para Allie todos os dias mas não obteve resposta, pois a mãe (Joan Allen) dela interceptava as cartas de Noah para a filha. Crendo que Allie não estava mais interessada nele, Noah escreveu uma carta de despedida e tentou se conformar. Alie esperava notícias de Noah, mas após 7 anos desistiu de esperar ao conhecer um charmoso oficial, Lon Hammond Jr. (James Marsden), que serviu na 2ª Grande Guerra (assim como Noah) e pertencia a uma família muito rica. Ele pede a mão de Allie, que aceita, mas o destino a faria se reencontrar com Noah. Como seu amor por ele ainda existia e era recíproco, ela precisa escolher entre o noivo e seu primeiro amor." +
+                "Diário de Uma Paixão(2004) \n", "Numa clínica geriátrica, Duke, um dos internos que relativamente está bem, lê para uma interna (com um quadro mais grave) a história de Allie Hamilton (Rachel McAdams) e Noah Calhoun (Ryan Gosling), dois jovens enamorados que em 1940 se conheceram num parque de diversões. Eles foram separados pelos pais dela, que nunca aprovaram o namoro, pois Noah era um trabalhador braçal e oriundo de uma família sem recursos financeiros. Para evitar qualquer aproximação,
+                 os pais de Alie a mandam para longe. Por um ano Noah escreveu para Allie todos os dias mas não obteve resposta, pois a mãe (Joan Allen) dela interceptava as cartas de Noah para a filha. Crendo que Allie não estava mais interessada nele, Noah escreveu uma carta de despedida e tentou se conformar. Alie esperava notícias de Noah, mas após 7 anos desistiu de esperar ao conhecer um charmoso oficial, Lon Hammond Jr. (James Marsden), que serviu na 2ª Grande Guerra (assim como Noah) e pertencia a uma família muito rica.
+                  Ele pede a mão de Allie, que aceita, mas o destino a faria se reencontrar com Noah. Como seu amor por ele ainda existia e era recíproco, ela precisa escolher entre o noivo e seu primeiro amor." +
                 "\n"));
         ListaRomance.add(new Filme("\n" +
-                "Orgulho e Preconceito(2005) \n", "Inglaterra, 1797. As cinco irmãs Bennet - Elizabeth (Keira Knightley), Jane (Rosamund Pike), Lydia (Jena Malone), Mary (Talulah Riley) e Kitty (Carey Mulligan) - foram criadas por uma mãe (Brenda Blethyn) que tinha fixação em lhes encontrar maridos que garantissem seu futuro. Porém Elizabeth deseja ter uma vida mais ampla do que apenas se dedicar ao marido, sendo apoiada pelo pai (Donald Sutherland). Quando o sr. Bingley (Simon Woods), um solteiro rico, passa a morar em uma mansão vizinha, as irmãs logo ficam agitadas. Jane logo parece que conquistará o coração do novo vizinho, enquanto que Elizabeth conhece o bonito e esnobe sr. Darcy (Matthew Macfadyen). Os encontros entre Elizabeth e Darcy passam a ser cada vez mais constantes, apesar deles sempre discutirem." +
+                "Orgulho e Preconceito(2005) \n", "Inglaterra, 1797. As cinco irmãs Bennet - Elizabeth (Keira Knightley), Jane (Rosamund Pike), Lydia (Jena Malone), Mary (Talulah Riley) e Kitty (Carey Mulligan) - foram criadas por uma mãe (Brenda Blethyn) que tinha fixação em lhes encontrar maridos que garantissem seu futuro. Porém Elizabeth deseja ter uma vida mais ampla do que apenas se dedicar ao marido,
+                 sendo apoiada pelo pai (Donald Sutherland). Quando o sr. Bingley (Simon Woods), um solteiro rico, passa a morar em uma mansão vizinha, as irmãs logo ficam agitadas. Jane logo parece que conquistará o coração do novo vizinho, enquanto que Elizabeth conhece o bonito e esnobe sr. Darcy (Matthew Macfadyen). Os encontros entre Elizabeth e Darcy passam a ser cada vez mais constantes, apesar deles sempre discutirem." +
                 "\n"));
 
 
         ListaFiccao.add(new Filme("\n" +
-                "Godzilla: Minus One(2023) \n", "Godzilla: Minus One, filme do diretor e roteirista Takashi Yamazaki, se passa em um Japão social e economicamente devastado após o término da Segunda Guerra Mundial, na qual o país saiu perdendo. A situação chega a um nível ainda mais crítico quando uma gigantesca e misteriosa criatura surge do mar para assolar o país, o temível kaiju. Sob esse pano de fundo, sentindo-se como se tivesse enganado a morte muitas vezes, está Kōichi Shikishima (Ryunosuke Kamiki), um piloto Kamikaze. E quando seu grupo é atacado na Ilha Odo, com muitos engenheiros de aviões de guerra mortos pelo monstro gigantesco, uma enorme culpa pesa sobre Shikishima, agora sobrevivente. Entrando assim, em uma missão pessoal, para defender suas pessoas queridas e vingar a morte de seus companheiros, Shikishima se une a um grande grupo de veteranos de Guerra, para finalmente derrotar o monstro conhecido como Godzilla." +
+                "Godzilla: Minus One(2023) \n", "Godzilla: Minus One, filme do diretor e roteirista Takashi Yamazaki, se passa em um Japão social e economicamente devastado após o término da Segunda Guerra Mundial, na qual o país saiu perdendo. A situação chega a um nível ainda mais crítico quando uma gigantesca e misteriosa criatura surge do mar para assolar o país, o temível kaiju. Sob esse pano de fundo,
+                 sentindo-se como se tivesse enganado a morte muitas vezes, está Kōichi Shikishima (Ryunosuke Kamiki), um piloto Kamikaze. E quando seu grupo é atacado na Ilha Odo, com muitos engenheiros de aviões de guerra mortos pelo monstro gigantesco, uma enorme culpa pesa sobre Shikishima, agora sobrevivente. Entrando assim, em uma missão pessoal, para defender suas pessoas queridas e vingar a morte de seus companheiros, 
+                 Shikishima se une a um grande grupo de veteranos de Guerra, para finalmente derrotar o monstro conhecido como Godzilla." +
                 "\n"));
         ListaFiccao.add(new Filme("\n" +
                 "Jurassic World: Reino Ameaçado(2018) \n", "Em Jurassic World: Reino Ameaçado, três anos após o fechamento do Jurassic Park, um vulcão prestes a entrar em erupção põe em risco a vida na ilha Nublar. No local não há mais qualquer presença humana, com os dinossauros vivendo livremente. Diante da situação, é preciso tomar uma decisão: deve-se retornar à ilha para salvar os animais ou abandoná-los para uma nova extinção? Decidida a resgatá-los, Claire (Bryce Dallas Howard) convoca Owen (Chris Pratt) a retornar à ilha com ela." +
