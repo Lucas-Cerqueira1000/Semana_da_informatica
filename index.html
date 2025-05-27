@@ -48,6 +48,7 @@
    img
    {
     box-shadow: black 1px 1px 30px;
+    border-radius: 20px;
    }
    h2
    {
@@ -133,16 +134,25 @@
    border-radius: 20px;       /* roundness of the scroll thumb */
    border: 3px solid rgb(134, 134, 134);  /* creates padding around scroll thumb */
    }
-   #link{
-        background-color: #212529;
-        padding: 10px;
-        border: none;
+   /* #link
+   {
+   background-color: #212529;
+   padding: 10px;
+   border-radius: 5px;
+   border: none;
+   } */
+   #link:hover
+   {
+   color: white;
+   text-shadow: none;
+   border:solid 2px;
+   /* width: 10px; */
    }
-   #link:hover{
-        color: white;
-        text-shadow: none;
-        border:solid 2px;
-        /* width: 10px; */
+   #navbarNav
+   {
+     border-radius: 10px;
+     background-color: #212529;
+     padding: 10px;
    }
 </style>
 <body>
@@ -169,7 +179,7 @@
 <div class="container my-5">
   <main>
   <section id="sobre" class="text-center">
-    <h2>Sobre o App</h2>
+    <h2 id="titulo">Sobre o App</h2>
 
       <p id="txt">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Este aplicativo foi desenvolvido como parte da Semana da Informática. 
         Ele utiliza componentes como SeekBar, Spinner, Intent e mais.
